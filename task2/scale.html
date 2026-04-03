@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Определение типа устройства по ширине</title>
+    <style>
+        .device-type {
+            font-size: 2rem;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .device-type::before {
+            content: "Desktop";
+        }
+
+        @media (max-width: 1023px) and (min-width: 768px) {
+            .device-type::before {
+                content: "Tablet";
+            }
+        }
+
+        @media (max-width: 767px) {
+            .device-type::before {
+                content: "Mobile";
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Определение типа устройства</h1>
+    <div class="device-type"></div>
+</body>
+</html>
