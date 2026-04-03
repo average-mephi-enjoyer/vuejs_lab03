@@ -3,25 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Синий круг</title>
+    <title>Круг за курсором</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
         .circle {
+            position: fixed;
             width: 60px;
             height: 60px;
             background-color: blue;
             border-radius: 50%;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
+            pointer-events: none;
+            left: 0;
+            top: 0;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
 <body>
     <div class="circle"></div>
+    <p><a href="index.html">Назад</a></p>
+    <script>
+        let circle = document.querySelector('.circle');
+        document.addEventListener('mousemove', (event) => {
+            let x = event.clientX;
+            let y = event.clientY;
+            circle.style.left = x + 'px';
+            circle.style.top = y + 'px';
+        });
+    </script>
 </body>
 </html>
