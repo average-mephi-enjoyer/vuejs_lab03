@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Кликер</title>
+</head>
+<body>
+    <h1>Кликер</h1>
+    <button id="clickButton">Тык</button>
+    <p>Количество кликов: <span id="clickCount">0</span></p>
+    <p><a href="index.html">Назад</a></p>
+
+    <script>
+        const button = document.getElementById('clickButton');
+        const counter = document.getElementById('clickCount');
+        let clicks = Number(localStorage.getItem('clicks')) || 0;
+        counter.textContent = clicks;
+        button.addEventListener('click', function () {
+            clicks++;
+            counter.textContent = clicks;
+            localStorage.setItem('clicks', clicks);
+        });
+    </script>
+</body>
+</html>
