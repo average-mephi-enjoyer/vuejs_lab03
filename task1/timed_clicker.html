@@ -2,44 +2,15 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Кликер с таймером</title>
+    <title>Кликер: общая статистика + скорость за сессию</title>
 </head>
 <body>
-
     <h1>Кликер</h1>
-
     <button id="clickButton">Тык</button>
-
-    <p>Количество кликов: <span id="clickCount">0</span></p>
-    <p>Среднее количество кликов в секунду: <span id="clickSpeed">0.00</span></p>
+    <p>Кликов: <span id="totalClicks">0</span></p>
+    <p>Средняя скорость (сессионная): <span id="clickSpeed">0.00</span></p>
     <p><a href="index.html">Назад</a></p>
 
-    <script>
-        let button = document.getElementById('clickButton');
-        let clickCountSpan = document.getElementById('clickCount');
-        let clickSpeedSpan = document.getElementById('clickSpeed');
-        let clicks = Number(localStorage.getItem('clicks')) || 0;
-        let startTime = Number(localStorage.getItem('startTime')) || 0;
-        function updateView() {
-            clickCountSpan.textContent = clicks;
-            if (clicks === 0 || startTime === 0) {
-                clickSpeedSpan.textContent = '0.00';
-                return;
-            }
-            const elapsedSeconds = (Date.now() - startTime) / 1000;
-            const average = elapsedSeconds > 0 ? clicks / elapsedSeconds : 0;
-            clickSpeedSpan.textContent = average.toFixed(2);
-        }
-        updateView();
-        button.addEventListener('click', function () {
-            if (startTime === 0) {
-                startTime = Date.now();
-                localStorage.setItem('startTime', startTime);
-            }
-            clicks++;
-            localStorage.setItem('clicks', clicks);
-            updateView();
-        });
-    </script>
+    <script src="task4.js"></script>
 </body>
 </html>
