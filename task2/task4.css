@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.circle {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+    border-radius: 50%;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+}
