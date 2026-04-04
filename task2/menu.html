@@ -4,70 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фиксированное меню</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .fixed-menu {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            color: white;
-            padding: 15px 0;
-            z-index: 1000;
-        }
-
-        .fixed-menu ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .fixed-menu a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-family: Arial, sans-serif;
-            padding: 5px 10px;
-            transition: background-color 0.3s;
-        }
-
-        .fixed-menu a:hover {
-            background-color: #555;
-            border-radius: 5px;
-        }
-
-        .content {
-            margin-top: 70px;
-            padding: 20px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        p {
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-    </style>
+    <link rel="stylesheet" href="task3.css">
 </head>
 <body>
     <nav class="fixed-menu">
         <ul>
-            <li><a href="#">Главная</a></li>
+            <li><a href="index.html">Главная</a></li>
             <li><a href="#">Каталог</a></li>
             <li><a href="#">Контакты</a></li>
             <li><a href="#">О нас</a></li>
