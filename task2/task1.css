@@ -1,0 +1,14 @@
+.theorem {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 1.2em;
+}
+td {
+    background-color: cyan;
+}
+table {
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 5px;
+}

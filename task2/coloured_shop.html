@@ -3,36 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Магазин</title>
-    <style>
-        /* Только для названия теоремы */
-        .theorem {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            font-size: 1.2em;
-        }
-        /* Фон ячеек таблицы */
-        td {
-            background-color: cyan;
-        }
-        table {
-            border-collapse: collapse;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="task1.css">
 </head>
 <body>
     <h1>Добро пожаловать!</h1>
-
-    <!-- Абзац: нужно покрасить первые три слова, а ссылку и восклицательный знак не трогать -->
     <p id="colorfulText">
         <i>Приветствуем</i> 
         <u>вас</u> 
         <b>в нашем</b> 
         <a href="http://example.com">магазине</a>!
     </p>
-    <p>&lt;h1&gt;<span class="theorem">Теорема Пифагора</span>&lt;/h1&gt;:<i>c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup></i></p>
+    <p>&lt;h1&gt;<span class="theorem">Теорема Пифагора</span>&lt;/h1&gt;: <i>c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup></i></p>
     <table border="1" bordercolor="black">
         <tr>
             <td colspan="2">Информация</td>
@@ -43,40 +24,6 @@
         </tr>
     </table>
     <p><a href="index.html">Назад</a></p>
-
-    <script>
-        function colorTextNodes(node, colorIndex) {
-            if (node.nodeType === Node.ELEMENT_NODE && node.tagName === 'A') return colorIndex;
-            if (node.nodeType === Node.TEXT_NODE) {
-                let text = node.textContent;
-                let fragment = document.createDocumentFragment();
-                for (let i = 0; i < text.length; i++) {
-                    let char = text[i];
-                    if (char === ' ') {
-                        fragment.appendChild(document.createTextNode(' '));
-                        colorIndex++;
-                    }
-                    else {
-                        let span = document.createElement('span');
-                        span.style.color = (colorIndex % 2 === 0) ? 'red' : 'blue';
-                        span.textContent = char;
-                        fragment.appendChild(span);
-                        colorIndex++;
-                    }
-                }
-                node.parentNode.replaceChild(fragment, node);
-                return colorIndex;
-            }
-            else if (node.nodeType === Node.ELEMENT_NODE) {
-                let currentIndex = colorIndex;
-                for (let child of node.childNodes)
-                    currentIndex = colorTextNodes(child, currentIndex);
-                return currentIndex;
-            }
-            return colorIndex;
-        }
-        const container = document.getElementById('colorfulText');
-        if (container) colorTextNodes(container, 0);
-    </script>
+    <script src="task1.js"></script>
 </body>
 </html>
