@@ -12,9 +12,7 @@
         <b>в нашем</b> 
         <a href="http://example.com">магазине</a>!
     </p>
-
     <p>"&lt;h1&gt;Теорема Пифагора:&lt;/h1&gt; <i>c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup></i></p>
-
     <table border="1" style="border-collapse: collapse;" bordercolor="black">
         <tr>
             <td colspan="2">Информация</td>
@@ -28,28 +26,7 @@
             </td>
         </tr>
     </table>
-
     <p><a href="index.html">Назад</a></p>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.body.style.userSelect = 'none';
-            document.body.style.webkitUserSelect = 'none';
-            document.body.style.msUserSelect = 'none';
-
-            document.addEventListener('selectstart', function (event) {
-                event.preventDefault();
-            });
-
-            document.addEventListener('copy', function (event) {
-                event.preventDefault();
-            });
-
-            document.addEventListener('contextmenu', function (event) {
-                event.preventDefault();
-            });
-        });
-    </script>
-
+    <script src="task2.js"></script>
 </body>
 </html>
