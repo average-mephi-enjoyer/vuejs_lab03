@@ -1,0 +1,33 @@
+.device-type {
+    font-size: 2rem;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+  }
+
+.device-type::before {
+    content: "Desktop";
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .device-type::before {
+        content: "Tablet";
+    }
+}
+
+@media (max-width: 767px) {
+    .device-type::before {
+        content: "Mobile";
+    }
+}
