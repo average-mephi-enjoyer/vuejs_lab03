@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Усовершенствованный калькулятор</title>    
+</head>
+<body>
+    <h1>Калькулятор</h1>
+    <div class="calculator">
+        <input id="display" type="text" value="0" readonly>
+        <table border="0" cellpadding="5">
+            <tr>
+                <td><button data-action="digit" data-value="7">7</button></td>
+                <td><button data-action="digit" data-value="8">8</button></td>
+                <td><button data-action="digit" data-value="9">9</button></td>
+                <td><button data-action="operator" data-value="/">/</button></td>
+            </tr>
+            <tr>
+                <td><button data-action="digit" data-value="4">4</button></td>
+                <td><button data-action="digit" data-value="5">5</button></td>
+                <td><button data-action="digit" data-value="6">6</button></td>
+                <td><button data-action="operator" data-value="*">*</button></td>
+            </tr>
+            <tr>
+                <td><button data-action="digit" data-value="1">1</button></td>
+                <td><button data-action="digit" data-value="2">2</button></td>
+                <td><button data-action="digit" data-value="3">3</button></td>
+                <td><button data-action="operator" data-value="-">-</button></td>
+            </tr>
+            <tr>
+                <td><button data-action="digit" data-value="0">0</button></td>
+                <td><button data-action="clear">C</button></td>
+                <td><button data-action="equals">=</button></td>
+                <td><button data-action="operator" data-value="+">+</button></td>
+            </tr>
+            <tr>
+                <td><button data-action="parenthesis" data-value="(">(</button></td>
+                <td><button data-action="parenthesis" data-value=")">)</button></td>
+                <td><button data-action="dot">.</button></td>
+                <td><button data-action="backspace">⌫</button></td>
+            </tr>
+        </table>
+    </div>
+    <p><a href="index.html">Назад</a></p>
+    <script src = "task6.js"></script>
+</body>
+</html>
